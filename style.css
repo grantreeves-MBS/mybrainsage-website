@@ -1,0 +1,168 @@
+/* My Brain Sage website: shared stylesheet.
+   Quiet, prose-led, artisan restraint. Inherits the app design system. */
+
+:root {
+  --teal: #2F6F73;
+  --teal-dark: #255B5E;
+  --coral: #C9A6A0;
+  --sage: #7FA8A1;
+  --warm-bg: #F2EBE9;
+  --dark: #2B2B2B;
+  --muted: #6B6B6B;
+  --gold: #DAA520;
+  --card: #FFFFFF;
+  --max-width: 680px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--warm-bg);
+  color: var(--dark);
+  line-height: 1.7;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Layout ---- */
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+main { padding: 56px 0 72px; }
+
+/* ---- Header / nav ---- */
+.site-header {
+  padding: 28px 0 8px;
+}
+.site-header .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.site-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--teal);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.site-nav a {
+  font-size: 15px;
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 22px;
+}
+.site-nav a:hover,
+.site-nav a.active { color: var(--teal); }
+
+/* ---- Typography ---- */
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 22px;
+}
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal);
+  margin: 44px 0 14px;
+  letter-spacing: -0.01em;
+}
+p { margin-bottom: 18px; }
+p.lead {
+  font-size: 21px;
+  line-height: 1.6;
+  color: var(--dark);
+  margin-bottom: 26px;
+}
+a { color: var(--teal); }
+
+.kicker {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 12px;
+}
+
+/* ---- Pull / emphasis block ---- */
+.emphasis {
+  border-left: 3px solid var(--teal);
+  padding: 4px 0 4px 22px;
+  margin: 30px 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--teal-dark);
+}
+
+/* ---- Download buttons ---- */
+.downloads {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 30px 0 8px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid var(--teal);
+  color: var(--teal);
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn:hover { background: var(--teal); color: #fff; }
+.btn-note {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ---- Cards ---- */
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px 26px;
+  margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(43,43,43,0.06);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  border-top: 1px solid rgba(43,43,43,0.10);
+  padding: 32px 0 44px;
+  margin-top: 24px;
+}
+.site-footer .wrap {
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.site-footer a { color: var(--muted); text-decoration: none; margin-right: 18px; }
+.site-footer a:hover { color: var(--teal); }
+
+/* ---- Responsive ---- */
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  h1 { font-size: 28px; }
+  main { padding: 40px 0 56px; }
+  .site-nav a { margin-left: 16px; }
+}
