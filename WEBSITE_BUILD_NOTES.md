@@ -6,29 +6,31 @@ plan and rationale live in `04_Strategy/MBS_Website_Decisions_17May2026.docx`
 
 ## What is in this folder
 
-A complete static site, four content pages plus an essays section, ready to
-host on GitHub Pages.
+A complete static site, four content pages plus a Founder Notes section, ready
+to host on GitHub Pages.
 
 - `index.html` — Home. Philosophy-led, the muscle and neuromodulator opener.
 - `about.html` — About. The case for brain literacy, the founder voice.
-- `essays.html` — Essays index. A growing list of long-form pieces.
-- `essay-founder.html` — The Founder Essay, the first essay.
+- `essays.html` — Founder Notes index. A growing list of long-form pieces. The
+  filename stays `essays.html`; only the visible section name is "Founder Notes".
+- `essay-founder.html` — "Why My Brain Sage Exists", the first Founder Note. The
+  filename stays `essay-founder.html`; only the visible title changed.
 - `privacy.html` — Privacy policy. Required for App Store and Google Play.
 - `support.html` — Support. Required for App Store and Google Play. Contact email.
 - `style.css` — Shared stylesheet. Inherits the app design system.
 - `assets/` — Ruby's graphic assets go here. See `assets/README.txt`.
 
-Nav across every page: Home, About, Essays, Privacy, Support.
+Nav across every page: Home, About, Founder Notes, Privacy, Support.
 
 House style for all copy: no em-dashes, no en-dashes, no Oxford commas, no
 curly double-quotes. Colons, commas and full stops instead.
 
-## Adding a new essay later
+## Adding a new note later
 
-The essays section is built to grow without restructuring.
+The Founder Notes section is built to grow without restructuring.
 
 1. Copy `essay-founder.html` to `essay-[name].html`.
-2. Replace its content with the new essay. Keep the header, footer and styling.
+2. Replace its content with the new piece. Keep the header, footer and styling.
 3. Add one new card to the list in `essays.html`, newest at the top.
 
 That is the whole process. No build step, no index to regenerate.
@@ -99,8 +101,8 @@ Add a link to the My Brain Sage website from the app's Settings screen.
 
 Placement and copy: Add a single row to the Settings screen, in the About /
 side-doors area, near the existing "About this app" entry. Label: "Visit
-mybrainsage.com". Subtitle (smaller, muted): "The website: essays, the privacy
-commitment, and more." Right chevron. Tapping it opens the website in the
+mybrainsage.com". Subtitle (smaller, muted): "The website: founder notes, the
+privacy commitment, and more." Right chevron. Tapping it opens the website in the
 device's external browser (use React Native's Linking.openURL).
 
 URL: use https://mybrainsage.com as a constant. The domain is not yet
