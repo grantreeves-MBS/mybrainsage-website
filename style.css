@@ -159,6 +159,34 @@ a { color: var(--teal); }
   box-shadow: 0 1px 3px rgba(43,43,43,0.06);
 }
 
+/* ---- App screenshots ---- */
+.shots {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0 10px;
+}
+.shots figure {
+  flex: 1 1 180px;
+  max-width: 210px;
+  margin: 0;
+}
+.shots img {
+  width: 100%;
+  display: block;
+  border-radius: 22px;
+  border: 1px solid rgba(43,43,43,0.06);
+  box-shadow: 0 10px 30px rgba(43,43,43,0.14);
+}
+.shots figcaption {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 12px;
+}
+
 /* ---- Footer ---- */
 .site-footer {
   border-top: 1px solid rgba(43,43,43,0.10);
@@ -182,4 +210,5 @@ a { color: var(--teal); }
   h1 { font-size: 28px; }
   main { padding: 40px 0 56px; }
   .site-nav a { margin-left: 16px; }
+  .shots figure { flex: 1 1 42%; max-width: 46%; }
 }
